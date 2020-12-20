@@ -3,6 +3,7 @@ const Redux = require('redux');
 console.clear();
 
 // People dropping off a form (Action Creators)
+// ACTIONS!!!!
 const createPolicy = (name, amount) => {
   return {
     // Action (a form in our analogy)
@@ -34,7 +35,7 @@ const createClaim = (name, amountOfMoneyToCollect) => {
 
 //--------------------------------------------------
 
-// Reducers (Departments)
+// REDUCERS!!!
 const claimsHistory = (oldListOfClaims = [], action) => {
   if (action.type === 'CREATE_CLAIM') {
     // we care about this action (FORM!)
@@ -75,6 +76,8 @@ const ourDepartments = combineReducers({
 const store = createStore(ourDepartments);
 
 store.dispatch(createPolicy('Alex', 20));
+console.log(store.getState());
+
 store.dispatch(createPolicy('Jim', 30));
 store.dispatch(createPolicy('Bob', 40));
 
@@ -84,3 +87,4 @@ store.dispatch(createClaim('Jim', 50));
 store.dispatch(deletePolicy('Bob'));
 
 console.log(store.getState());
+console.log(store);
