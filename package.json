@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
